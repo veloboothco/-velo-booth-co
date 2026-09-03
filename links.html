@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VELO Booth Co. | Links & Event Details</title>
+<meta name="description" content="Quick links, booking information, and event details for VELO Booth Co.">
+<style>
+:root{--ink:#171717;--paper:#fbf8f2;--taupe:#8d7c69;--line:#e7dfd3;--card:#fff;--soft:#efe4d2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}.wrap{width:min(680px,92%);margin:auto}.top{padding:34px 0 18px;text-align:center}.logo{font-family:Georgia,'Times New Roman',serif;font-size:42px;letter-spacing:.18em;margin:0}.sub{letter-spacing:.38em;font-size:11px;margin:8px 0 0}.tag{margin:22px auto 0;max-width:460px;color:#716b64;line-height:1.6}.links{display:grid;gap:12px;margin:22px 0}.pill{display:block;text-align:center;text-decoration:none;padding:17px 18px;border-radius:999px;background:var(--ink);color:#fff;font-family:Georgia,'Times New Roman',serif;font-size:18px;letter-spacing:.04em}.pill.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}.micro{font-size:12px;color:#777;text-align:center;margin:12px 0 28px}.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:42px}.socials a{font-size:13px;text-decoration:none;border:1px solid var(--line);padding:9px 13px;border-radius:999px;background:#fff}.section{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px 22px;margin:0 0 32px}.eyebrow{letter-spacing:.22em;font-size:11px;color:var(--taupe);font-weight:700}.section h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:36px;margin:8px 0 8px}.section>p{color:#716b64;line-height:1.6}.form{display:grid;gap:14px;margin-top:20px}.form label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#5f5a54}.form input,.form textarea,.form select{width:100%;margin-top:7px;border:1px solid var(--line);background:#fff;padding:14px;border-radius:12px;font:inherit;color:var(--ink)}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.submit{border:0;cursor:pointer;width:100%}.status{font-size:13px;line-height:1.5;color:#6f6962;margin:0}.divider{height:1px;background:var(--line);margin:8px 0}.footer{text-align:center;padding:6px 0 40px;color:#777;font-size:12px}.back{display:inline-block;text-decoration:none;margin-top:8px;font-size:13px;color:#655d55}@media(max-width:520px){.row{grid-template-columns:1fr}.section{border-radius:22px}.section h2{font-size:32px}.logo{font-size:38px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <h1 class="logo">VELO</h1>
+    <p class="sub">BOOTH CO. LLC</p>
+    <p class="tag">More than a photo. It’s your moment.<br>Start here for bookings, experiences, backdrops, and client event details.</p>
+  </header>
+
+  <nav class="links" aria-label="Quick links">
+    <a class="pill" href="index.html#contact">Check Availability</a>
+    <a class="pill alt" href="index.html#experiences">Explore Our Experiences</a>
+    <a class="pill alt" href="index.html#backdrops">Choose a Backdrop</a>
+    <a class="pill alt" href="#event-details">Already Booked? Event Details</a>
+    <a class="pill alt" href="index.html">Visit Full Website</a>
+  </nav>
+  <p class="micro">New inquiry? Start with <strong>Check Availability</strong>. Already booked? Use the Event Details form below.</p>
+
+  <div class="socials" aria-label="Social media links">
+    <a href="https://www.instagram.com/veloboothcollc?igsi=MTQ4eHlmbmxzZXR6aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    <a href="https://www.tiktok.com/@veloboothcollc?_r=1&_t=ZP-99PePnvsrst" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+    <a href="https://www.facebook.com/share/1BK91dNFWQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+  </div>
+
+  <section id="event-details" class="section">
+    <p class="eyebrow">BOOKED CLIENTS</p>
+    <h2>Event Details</h2>
+    <p>Already booked with VELO? Send us the final details we need to prepare your photo booth experience. If something is still undecided, you can note that below.</p>
+    <div class="divider"></div>
+    <form id="eventForm" class="form" action="https://formspree.io/f/mdeozlwv" method="POST">
+      <input type="hidden" name="submission_type" value="Booked Client Event Details">
+      <label>Client Name<input name="client_name" type="text" required></label>
+      <label>Email<input name="email" type="email" required></label>
+      <label>Event Date<input name="event_date" type="date" required></label>
+      <label>Venue Name & Full Address<textarea name="venue_and_address" rows="2" required></textarea></label>
+      <div class="row">
+        <label>Event Start Time<input name="event_start_time" type="time"></label>
+        <label>Event End Time<input name="event_end_time" type="time"></label>
+      </div>
+      <label>Photo Booth Service Time<input name="photo_booth_service_time" type="text" placeholder="Example: 6:00 PM–9:00 PM"></label>
+      <label>Estimated Guest Count<input name="estimated_guest_count" type="number" min="1"></label>
+      <label>Backdrop Selection<select name="backdrop_selection"><option value="">Choose one / Not sure yet</option><option>Silver Sparkle</option><option>Classic White</option><option>Red Curtain</option><option>Red Roses</option><option>Black Roses</option><option>Black Sparkle</option><option>Not sure yet</option></select></label>
+      <label>Photo Design Preferences<textarea name="photo_design_preferences" rows="3" placeholder="Names, colors, theme, wording, logo, etc."></textarea></label>
+      <label>Anything Else We Should Know?<textarea name="event_notes" rows="4" placeholder="Parking, loading, venue contact, setup notes, special requests, etc."></textarea></label>
+      <button id="eventSubmit" class="pill submit" type="submit">Send Event Details</button>
+      <p id="eventStatus" class="status" aria-live="polite">Submitting this form does not change your contracted services or payment terms. Contact VELO directly for booking changes.</p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>VELO Booth Co. LLC • Valparaiso, Indiana</p>
+    <a class="back" href="index.html">← Back to veloboothco.com</a>
+  </footer>
+</main>
+<script>
+const eventForm=document.getElementById('eventForm');
+const eventStatus=document.getElementById('eventStatus');
+const eventSubmit=document.getElementById('eventSubmit');
+eventForm.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  eventSubmit.disabled=true; eventSubmit.textContent='Sending…';
+  eventStatus.textContent='Sending your event details…';
+  try{
+    const response=await fetch(eventForm.action,{method:'POST',body:new FormData(eventForm),headers:{'Accept':'application/json'}});
+    if(response.ok){
+      eventForm.reset();
+      eventStatus.textContent='Thank you! Your event details have been received. VELO Booth Co. will review everything and follow up if anything else is needed.';
+    }else{
+      eventStatus.textContent='We couldn’t send your details. Please try again or contact VELO Booth Co. directly.';
+    }
+  }catch(err){eventStatus.textContent='We couldn’t send your details. Please check your connection and try again.';}
+  finally{eventSubmit.disabled=false; eventSubmit.textContent='Send Event Details';}
+});
+</script>
+</body>
+</html>
