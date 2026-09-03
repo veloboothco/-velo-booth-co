@@ -5,23 +5,33 @@ menuToggle.addEventListener('click',()=>mobileMenu.classList.add('open'));
 closeMenu.addEventListener('click',()=>mobileMenu.classList.remove('open'));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
 
-document.getElementById('quoteForm').addEventListener('submit',(e)=>{
+const quoteForm=document.getElementById('quoteForm');
+const formStatus=document.getElementById('formStatus');
+const submitButton=quoteForm.querySelector('button[type="submit"]');
+
+quoteForm.addEventListener('submit', async (e)=>{
   e.preventDefault();
-  const v=id=>document.getElementById(id).value;
-  const subject=encodeURIComponent(`VELO Booth Co. Quote Request - ${v('type')}`);
-  const body=encodeURIComponent(`Name: ${v('name')}
-Email: ${v('email')}
-Phone: ${v('phone')}
-Event Date: ${v('date')}
-Venue / Location: ${v('location')}
-Event Type: ${v('type')}
-Hours Needed: ${v('hours')}
-Estimated Guest Count: ${v('guests')}
-Backdrop Preference: ${v('backdrop')}
+  submitButton.disabled=true;
+  submitButton.textContent='Sending...';
+  formStatus.textContent='Sending your request...';
 
-Add-Ons / Notes:
-${v('message')}
+  try {
+    const response=await fetch(quoteForm.action,{
+      method:'POST',
+      body:new FormData(quoteForm),
+      headers:{'Accept':'application/json'}
+    });
 
-Please send me a personalized quote.`);
-  window.location.href=`mailto:veloboothco@gmail.com?subject=${subject}&body=${body}`;
+    if(response.ok){
+      quoteForm.reset();
+      formStatus.textContent='Thank you! Your event request has been received. VELO Booth Co. will review your details and get back to you shortly.';
+    } else {
+      formStatus.textContent='We couldn’t send your request. Please try again or contact VELO Booth Co. directly.';
+    }
+  } catch(error){
+    formStatus.textContent='We couldn’t send your request. Please check your connection and try again.';
+  } finally {
+    submitButton.disabled=false;
+    submitButton.textContent='Request My Quote';
+  }
 });

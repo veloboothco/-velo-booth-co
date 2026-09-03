@@ -158,19 +158,19 @@
     </div>
   </div>
 
-  <form id="quoteForm" class="form">
-    <label>Name<input id="name" type="text" required></label>
-    <label>Email<input id="email" type="email" required></label>
-    <label>Phone<input id="phone" type="tel"></label>
-    <label>Event Date<input id="date" type="date"></label>
-    <label>Venue / Location<input id="location" type="text"></label>
-    <label>Event Type<select id="type"><option>Wedding</option><option>Birthday / Social Event</option><option>Corporate Event</option><option>Church / Community Event</option><option>Other</option></select></label>
-    <label>Hours Needed<input id="hours" type="number" min="2" value="3"></label>
-    <label>Estimated Guest Count<input id="guests" type="number" min="1"></label>
-    <label>Backdrop Preference<input id="backdrop" type="text" placeholder="If known"></label>
-    <label>Add-Ons / Notes<textarea id="message" rows="5" placeholder="Flower wall, custom props, extra hours, etc."></textarea></label>
+  <form id="quoteForm" class="form" action="https://formspree.io/f/mdeozlwv" method="POST">
+    <label>Name<input id="name" name="name" type="text" required></label>
+    <label>Email<input id="email" name="email" type="email" required></label>
+    <label>Phone<input id="phone" name="phone" type="tel"></label>
+    <label>Event Date<input id="date" name="event_date" type="date"></label>
+    <label>Venue / Location<input id="location" name="venue_location" type="text"></label>
+    <label>Event Type<select id="type" name="event_type"><option>Wedding</option><option>Birthday / Social Event</option><option>Corporate Event</option><option>Church / Community Event</option><option>Other</option></select></label>
+    <label>Hours Needed<input id="hours" name="hours_needed" type="number" min="2" value="3"></label>
+    <label>Estimated Guest Count<input id="guests" name="estimated_guest_count" type="number" min="1"></label>
+    <label>Backdrop Preference<input id="backdrop" name="backdrop_preference" type="text" placeholder="If known"></label>
+    <label>Add-Ons / Notes<textarea id="message" name="addons_notes" rows="5" placeholder="Flower wall, custom props, extra hours, etc."></textarea></label>
     <button class="btn" type="submit">Request My Quote</button>
-    <p class="form-note">Submitting your request opens an email with your event details pre-filled so you can send it directly to VELO.</p>
+    <p id="formStatus" class="form-note" aria-live="polite">Submit your event details and VELO Booth Co. will follow up with availability and next steps.</p>
   </form>
 </section>
 </main>
