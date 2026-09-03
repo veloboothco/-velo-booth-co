@@ -42,3 +42,78 @@ footer{background:#151515;color:white;padding:44px 8vw}.footer-brand{font-family
 .social-landing{background:linear-gradient(145deg,#fff,#f1e4d2)}
 .corporate-landing{background:linear-gradient(145deg,#f7f4ef,#ddd2c5)}
 @media(max-width:650px){.experience-landing{padding:78px 7vw}.experience-landing h1{font-size:3.7rem}.experience-benefits{grid-template-columns:1fr;gap:0}.experience-benefits span{border-bottom:0}.experience-benefits span:last-child{border-bottom:1px solid var(--line)}}
+
+/* === Niche campaign landing pages === */
+body.campaign-page{background:#f7f3ed;color:#171717}
+.campaign-page .header{background:rgba(248,245,239,.96);backdrop-filter:blur(10px)}
+.campaign-hero{position:relative;min-height:78vh;display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;background:#151310;color:#fff}
+.campaign-hero-copy{padding:9rem 5vw 5rem;display:flex;flex-direction:column;justify-content:center;z-index:2}
+.campaign-hero-media{min-height:620px;background-size:cover;background-position:center;position:relative}
+.campaign-hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,15,12,.4),rgba(17,15,12,.02))}
+.campaign-hero .eyebrow{color:#d6ad68;letter-spacing:.17em}
+.campaign-hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(3.4rem,6vw,6.5rem);line-height:.94;margin:.8rem 0 1.4rem;max-width:760px}
+.campaign-hero h1 em{font-weight:400;color:#d6ad68}
+.campaign-hero p.hero-sub{font-size:1.12rem;line-height:1.75;max-width:580px;color:#eee6dd;margin:0 0 2rem}
+.campaign-meta{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:2rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#ddd2c3}
+.campaign-meta span{padding-right:1.2rem;border-right:1px solid rgba(255,255,255,.25)}
+.campaign-meta span:last-child{border-right:0}
+.campaign-btn{display:inline-flex;align-items:center;justify-content:center;gap:.8rem;background:#d6ad68;color:#111;text-decoration:none;border-radius:4px;padding:1rem 1.5rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;width:max-content}
+.campaign-btn.dark{background:#141414;color:#fff}
+.campaign-section{padding:5.5rem 5vw}
+.campaign-section.light{background:#fbf9f5}
+.campaign-section.white{background:#fff}
+.campaign-two-col{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;max-width:1200px;margin:auto}
+.campaign-kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#9a6f35;margin-bottom:1rem}
+.campaign-section h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(2.4rem,4vw,4.25rem);line-height:1.08;margin:.3rem 0 1rem}
+.campaign-section p{font-size:1.03rem;line-height:1.8;color:#5d5851}
+.campaign-split-card{border-top:1px solid #d9d0c5;padding-top:1.5rem}
+.campaign-feature-wrap{text-align:center;max-width:1200px;margin:auto}
+.campaign-features{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#ddd4c9;border:1px solid #ddd4c9;margin-top:2.5rem}
+.campaign-feature{background:#fff;padding:2rem 1.2rem;min-height:190px}
+.campaign-feature .icon{font-size:1.6rem;margin-bottom:1rem;color:#a8793e}
+.campaign-feature strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+.campaign-feature span{font-size:.86rem;line-height:1.55;color:#6b655e}
+.campaign-gallery{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:.7rem;max-width:1200px;margin:0 auto}
+.campaign-gallery img,.campaign-gallery .concept-tile{width:100%;height:350px;object-fit:cover;display:block;border-radius:3px}
+.concept-tile{display:flex!important;align-items:flex-end;padding:1.5rem;color:#fff;background:linear-gradient(145deg,#2d2721,#8a6847);font-family:Georgia,serif;font-size:1.6rem}
+.campaign-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto;text-align:center}
+.campaign-trust div{padding:1.5rem;border-top:1px solid #d6ccc0;font-size:.83rem;text-transform:uppercase;letter-spacing:.05em}
+.campaign-final{padding:5.5rem 5vw;text-align:center;color:#fff;background:#16130f}
+.campaign-final h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(2.5rem,5vw,4.8rem);margin:0 auto 1rem;max-width:900px}
+.campaign-final p{max-width:650px;margin:0 auto 2rem;color:#ded5c9;line-height:1.7}
+.campaign-final .campaign-btn{margin:auto}
+.campaign-page.quince .campaign-hero{background:#24121f}
+.campaign-page.quince .campaign-hero .eyebrow,.campaign-page.quince .campaign-hero h1 em{color:#e7a1c6}
+.campaign-page.quince .campaign-btn{background:#e7a1c6}
+.campaign-page.quince .campaign-kicker{color:#a94f82}
+.campaign-page.quince .campaign-feature .icon{color:#b85f91}
+.campaign-page.quince .concept-tile{background:linear-gradient(145deg,#3d1830,#b75d91)}
+.campaign-page.quince .campaign-final{background:#2a1524}
+.campaign-page.corporate .campaign-hero{background:#0e151b}
+.campaign-page.corporate .campaign-hero .eyebrow,.campaign-page.corporate .campaign-hero h1 em{color:#c8a66a}
+.campaign-page.corporate .campaign-kicker{color:#80663c}
+.campaign-page.corporate .concept-tile{background:linear-gradient(145deg,#13202a,#8c7148)}
+.campaign-page.corporate .campaign-final{background:#0e151b}
+.niche-note{max-width:900px;margin:1rem auto 0;text-align:center;color:#777;font-size:.88rem;line-height:1.6}
+@media(max-width:900px){
+  .campaign-hero{grid-template-columns:1fr;min-height:auto}
+  .campaign-hero-copy{padding:7rem 7vw 3.5rem;order:2}
+  .campaign-hero-media{min-height:430px;order:1;margin-top:76px}
+  .campaign-hero h1{font-size:clamp(3rem,13vw,4.6rem)}
+  .campaign-two-col{grid-template-columns:1fr;gap:2.5rem}
+  .campaign-features{grid-template-columns:1fr 1fr}
+  .campaign-gallery{grid-template-columns:1fr 1fr}
+  .campaign-gallery img,.campaign-gallery .concept-tile{height:270px}
+  .campaign-gallery>*:first-child{grid-column:1/-1;height:390px}
+  .campaign-trust{grid-template-columns:1fr 1fr}
+}
+@media(max-width:540px){
+  .campaign-section{padding:4rem 6vw}
+  .campaign-features{grid-template-columns:1fr}
+  .campaign-gallery{grid-template-columns:1fr}
+  .campaign-gallery>*:first-child{grid-column:auto;height:330px}
+  .campaign-gallery img,.campaign-gallery .concept-tile{height:300px}
+  .campaign-trust{grid-template-columns:1fr 1fr}
+  .campaign-meta{display:grid;grid-template-columns:1fr 1fr}
+  .campaign-meta span{border-right:0;padding-right:0}
+}
