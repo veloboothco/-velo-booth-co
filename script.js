@@ -24,7 +24,6 @@ if (requestedType && quoteForm) {
 
 if (quoteForm && formStatus) {
   const submitButton = quoteForm.querySelector('button[type="submit"]');
-  const originalButtonLabel = submitButton.textContent;
   quoteForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     submitButton.disabled = true;
@@ -48,7 +47,7 @@ if (quoteForm && formStatus) {
       formStatus.textContent = 'We couldn’t send your request. Please check your connection and try again.';
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = originalButtonLabel;
+      submitButton.textContent = 'Request My Quote';
     }
   });
 }
